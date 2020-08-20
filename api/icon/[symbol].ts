@@ -10,7 +10,7 @@ export default (req: NowRequest, res: NowResponse) => {
     `../../public/icons/128/color/${symbol}.png`
   );
 
-  var readStream = fs.createReadStream(filePath);
+  const readStream = fs.createReadStream(filePath);
 
   readStream.on("open", function () {
     res.writeHead(200, {
